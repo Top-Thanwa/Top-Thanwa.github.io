@@ -2,23 +2,44 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>โปรไฟล์ส่วนตัว</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรไฟล์ - ธันวา พะเนตรัมย์</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: 'Sarabun', sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        /* --- Global Styles --- */
+        * {
+            box-sizing: border-box; /* ช่วยให้การจัดการ layout ง่ายขึ้น */
         }
 
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #f4f7f6; /* เปลี่ยนสีพื้นหลังเล็กน้อย */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* --- Container --- */
         .profile-container {
-            max-width: 600px;
-            background: #fff;
-            margin: 50px auto;
-            padding: 30px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 10px;
+            max-width: 700px;
+            background: #ffffff;
+            margin: 40px auto;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+
+        /* --- Profile Header --- */
+        .profile-header {
             text-align: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
         }
 
         img.profile-img {
@@ -26,51 +47,152 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
         }
 
-        h1 {
-            margin-top: 20px;
-            font-size: 28px;
-            color: #333;
+        h1.profile-name {
+            margin: 10px 0 5px 0;
+            font-size: 2.2rem; /* 1rem = 16px */
+            color: #2c3e50;
+            font-weight: 700;
         }
 
-        h2 {
-            margin-top: 20px;
-            font-size: 28px;
-            color: #333;
+        p.profile-subtitle {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 300;
         }
 
-        p {
-            font-size: 18px;
-            color: #666;
+        /* --- Profile Section --- */
+        .profile-section {
+            margin-bottom: 30px;
         }
 
-        .contact {
-            margin-top: 20px;
-            font-size: 16px;
+        .profile-section h2 {
+            font-size: 1.6rem;
+            color: #007BFF;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
 
-        .contact a {
+        .profile-section p {
+            font-size: 1rem;
+            color: #444;
+            margin: 0 0 10px 0;
+        }
+        
+        .profile-section p strong {
+            color: #111;
+            min-width: 120px; /* จัดให้หัวข้อ (เช่น "ชื่อ:") กว้างเท่าๆ กัน */
+            display: inline-block;
+        }
+
+        /* --- Skills List (Tags) --- */
+        ul.skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px; /* ระยะห่างระหว่างแท็ก */
+        }
+        
+        ul.skills-list li {
+            background-color: #ecf0f1;
+            color: #34495e;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        /* --- Contact List --- */
+        ul.contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.contact-list li {
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        ul.contact-list li strong {
+            color: #111;
+            min-width: 80px;
+            display: inline-block;
+        }
+
+        ul.contact-list a {
             color: #007BFF;
             text-decoration: none;
+            font-weight: 500;
         }
 
-        .contact a:hover {
+        ul.contact-list a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
 
 <div class="profile-container">
-    <img src="top.jpg" alt="รูปโปรไฟล์" class="profile-img">
-    <h1>นาย ธันวา พะเนตรัมย์</h1>
-    <h2>ชื่อเล่น ท๊อป</h2>
-    <p>อายุ 20 | เพศ ชาย</p>
 
-    <div class="contact">
-        🌐 เว็บไซต์: <a href="https://github.com/Top-Thanwa" target="_blank">GitHub</a><br>
+    <div class="profile-header">
+        <img src="top.jpg" alt="รูปโปรไฟล์" class="profile-img">
+        <h1 class="profile-name">ธันวา พะเนตรัมย์ (ท๊อป)</h1>
+        <p class="profile-subtitle">นักศึกษาสาขาวิทยาการคอมพิวเตอร์ | มหาวิทยาลัยราชภัฏอุดรธานี</p>
     </div>
+
+    <div class="profile-section">
+        <h2>ข้อมูลส่วนตัว</h2>
+        <p><strong>ชื่อเต็ม:</strong> นาย ธันวา พะเนตรัมย์ (Thanwa Phanetram)</p>
+        <p><strong>อายุ:</strong> 20 ปี</p>
+        <p><strong>การศึกษา:</strong> นักศึกษาปีที่ 2</p>
+        <p><strong>คณะ:</strong> วิทยาศาสตร์</p>
+        <p><strong>มหาวิทยาลัย:</strong> ราชภัฏอุดรธานี</p>
+    </div>
+
+    <div class="profile-section">
+        <h2>ทักษะ</h2>
+        <ul class="skills-list">
+            <li>ภาษา C</li>
+            <li>HTML</li>
+            <li>PHP</li>
+            <li>VS Code</li>
+            <li>Dev-C++</li>
+            <li>การแก้ปัญหา</li>
+            <li>การทำงานเป็นทีม</li>
+        </ul>
+    </div>
+
+    <div class="profile-section">
+        <h2>ผลงาน</h2>
+        <p>ยังไม่มีผลงาน (กำลังอยู่ในช่วงเรียนรู้และพัฒนา)</p>
+    </div>
+    
+    <div class="profile-section">
+        <h2>กิจกรรมและผลงานอื่นๆ</h2>
+        <p>ยังไม่มีกิจกรรมที่เกี่ยวข้อง</p>
+    </div>
+
+    <div class="profile-section">
+        <h2>ติดต่อ</h2>
+        <ul class="contact-list">
+            <li><strong>Email:</strong> 67040249101@udru.ac.th</li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/Top-Thanwa" target="_blank">Top-Thanwa</a></li>
+            <li><strong>Facebook:</strong> <a href="https://web.facebook.com/TopThanwa.t" target="_blank">ท๊อป ธันวา</a></li>
+            <li><strong>ที่อยู่:</strong> ต.บ้านถ่อน อ.ท่าบ่อ จ.หนองคาย</li>
+        </ul>
+    </div>
+
 </div>
 
 </body>
